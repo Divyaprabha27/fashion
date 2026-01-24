@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ELARA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="ELARA" class="logo-img">
+        </a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+            <!-- Note: Will be updated by global replace to include Contact link later if I miss it here, but adding it now for this file -->
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="lookbook.html" class="nav-link">Lookbook</a></li>
+            <li><a href="collections.html" class="nav-link">Collections</a></li>
+            <li><a href="press.html" class="nav-link">Press</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            <li><button class="theme-toggle" aria-label="Toggle Dark Mode"><img src="assets/moon.svg" class="theme-icon"
+                        alt="Dark Mode"></button></li>
+        </ul>
+    </nav>
+
+    <section class="section" style="padding-top: 8rem;">
+        <h1 class="section-title">Contact Us</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>
+                    We’d love to hear from you. Whether you have a question about our collections,
+                    shipping, or just want to say hello, our team is ready to assist.
+                </p>
+                <div style="margin-top: 2rem;">
+                    <h4>Atelier</h4>
+                    <p>123 Fashion Avenue<br>New York, NY 10012</p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <h4>Email</h4>
+                    <p><a href="mailto:hello@elara.com" style="text-decoration: underline;">hello@elara.com</a></p>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <h4>Press Inquiries</h4>
+                    <p><a href="mailto:press@elara.com" style="text-decoration: underline;">press@elara.com</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Send a Message</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p style="color: var(--secondary-text); font-size: 0.9rem; line-height: 1.6;">
+                    Redefining luxury through sustainable practices and avant-garde design.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 ELARA Fashion Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

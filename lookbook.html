@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lookbook | ELARA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <style>
+        .lookbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .lookbook-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+        }
+
+        .lookbook-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .lookbook-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .lookbook-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lookbook-item:hover .lookbook-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="ELARA" class="logo-img">
+        </a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="lookbook.html" class="nav-link active">Lookbook</a></li>
+            <li><a href="collections.html" class="nav-link">Collections</a></li>
+            <li><a href="press.html" class="nav-link">Press</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><button class="theme-toggle" aria-label="Toggle Dark Mode"><img src="assets/moon.svg" class="theme-icon"
+                        alt="Dark Mode"></button></li>
+        </ul>
+
+    </nav>
+
+    <section class="section">
+        <h1 class="section-title">Visual Stories</h1>
+        <div style="max-width: 800px; margin: 0 auto 4rem auto; text-align: center;">
+            <p style="font-size: 1.1rem; color: var(--secondary-text);">
+                Explore our curated lookbook featuring the latest trends and artistic expressions from ELARA.
+                Each image captures the essence of our design philosophy: bold, sustainable, and timeless.
+            </p>
+        </div>
+        <div class="lookbook-grid">
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 1">
+                <div class="lookbook-overlay">
+                    <h3>Ethereal Summer</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Lightweight fabrics meet structural
+                        design.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 2">
+                <div class="lookbook-overlay">
+                    <h3>Urban Noir</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Monochromatic elegance for the
+                        modern city.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 3">
+                <div class="lookbook-overlay">
+                    <h3>Silk & Stone</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Contrasting textures that define
+                        luxury.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 4">
+                <div class="lookbook-overlay">
+                    <h3>Modern Heritage</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Reimagining classics for today.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 5">
+                <div class="lookbook-overlay">
+                    <h3>Midnight Velvet</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Deep tones and soft touches for
+                        evening.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 6">
+                <div class="lookbook-overlay">
+                    <h3>Golden Hour</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Warm hues inspired by the setting
+                        sun.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 1">
+                <div class="lookbook-overlay">
+                    <h3>Ethereal Summer</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Lightweight fabrics meet structural
+                        design.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"
+                    alt="Look 2">
+                <div class="lookbook-overlay">
+                    <h3>Urban Noir</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Monochromatic elegance for the
+                        modern city.</p>
+                    <a href="#"
+                        style="display: inline-block; margin-top: 1rem; border-bottom: 1px solid white; padding-bottom: 2px;">View
+                        Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 1: Behind the Seams (Split Layout) -->
+    <section class="section alt-bg">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Behind the Seams</h2>
+                <p>
+                    Every collection begins with a sketch, a fabric swatch, and a vision.
+                    Our atelier is where the magic happens—where raw materials are transformed
+                    into wearable art through hours of meticulous hand-stitching and draping.
+                </p>
+                <p>
+                    "Perfection is not just about the final look, but the integrity of the construction."
+                </p>
+                <a href="#" class="btn" style="margin-top: 1rem;">Visit the Atelier</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?q=80&w=1000&auto=format&fit=crop"
+                    alt="Atelier Process">
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 2: Design Inspiration (Different Grid) -->
+    <section class="section">
+        <h2 class="section-title">Design Inspiration</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+            <div>
+                <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=800&auto=format&fit=crop"
+                    alt="Moodboard 1" style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 0.5rem;">
+                <h4 style="font-size: 1rem;">Texture Study</h4>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=800&auto=format&fit=crop"
+                    alt="Moodboard 2" style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 0.5rem;">
+                <h4 style="font-size: 1rem;">Color Palette</h4>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+                    alt="Moodboard 3" style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 0.5rem;">
+                <h4 style="font-size: 1rem;">Silhouette Sketches</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p style="color: var(--secondary-text); font-size: 0.9rem; line-height: 1.6;">
+                    Redefining luxury through sustainable practices and avant-garde design.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 ELARA Fashion Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

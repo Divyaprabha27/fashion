@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press | ELARA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <style>
+        .press-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .press-item {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .press-item:last-child {
+            border-bottom: none;
+        }
+
+        .press-date {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            min-width: 100px;
+            padding-top: 0.2rem;
+        }
+
+        .press-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .press-publication {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .press-excerpt {
+            color: var(--secondary-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more::after {
+            content: '→';
+            transition: transform 0.2s;
+        }
+
+        .read-more:hover::after {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 600px) {
+            .press-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .press-date {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="ELARA" class="logo-img">
+        </a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="lookbook.html" class="nav-link">Lookbook</a></li>
+            <li><a href="collections.html" class="nav-link">Collections</a></li>
+            <li><a href="press.html" class="nav-link active">Press</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><button class="theme-toggle" aria-label="Toggle Dark Mode"><img src="assets/moon.svg" class="theme-icon"
+                        alt="Dark Mode"></button></li>
+        </ul>
+
+    </nav>
+
+    <section class="section">
+        <h1 class="section-title">In The Press</h1>
+
+        <div class="press-list">
+            <article class="press-item">
+                <div class="press-date">OCT 2024</div>
+                <div class="press-content">
+                    <span class="press-publication">Vogue Paris</span>
+                    <h2>"The Future of Sustainable Luxury"</h2>
+                    <p class="press-excerpt">
+                        Elara challenges the fashion industry's status quo with a collection that is as ethically
+                        produced as it is visually stunning. We sat down with the designer to discuss her vision...
+                    </p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="press-item">
+                <div class="press-date">AUG 2024</div>
+                <div class="press-content">
+                    <span class="press-publication">Harper's Bazaar</span>
+                    <h2>"Rising Stars of Fashion Week"</h2>
+                    <p class="press-excerpt">
+                        Among the new talent showcased this season, Elara stood out for her masterful use of organic
+                        textures and bold, architectural silhouettes.
+                    </p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+
+            <article class="press-item">
+                <div class="press-date">MAY 2024</div>
+                <div class="press-content">
+                    <span class="press-publication">Elle Decoration</span>
+                    <h2>"Fashion in Interiors"</h2>
+                    <p class="press-excerpt">
+                        How fashion designer Elara is translating her runway aesthetic into a new line of home textiles
+                        that bring high fashion into the living room.
+                    </p>
+                    <a href="#" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p style="color: var(--secondary-text); font-size: 0.9rem; line-height: 1.6;">
+                    Redefining luxury through sustainable practices and avant-garde design.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 ELARA Fashion Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

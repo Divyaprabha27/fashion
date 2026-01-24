@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | ELARA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <style>
+        .collection-section {
+            margin-bottom: 6rem;
+        }
+
+        .collection-header {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .collection-title {
+            font-size: 2rem;
+            font-family: var(--font-heading);
+        }
+
+        .collection-year {
+            font-family: var(--font-body);
+            color: var(--secondary-text);
+        }
+
+        .collection-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .collection-img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .collection-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="ELARA" class="logo-img">
+        </a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="lookbook.html" class="nav-link">Lookbook</a></li>
+            <li><a href="collections.html" class="nav-link active">Collections</a></li>
+            <li><a href="press.html" class="nav-link">Press</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><button class="theme-toggle" aria-label="Toggle Dark Mode"><img src="assets/moon.svg" class="theme-icon"
+                        alt="Dark Mode"></button></li>
+        </ul>
+
+    </nav>
+
+    <section class="section">
+        <h1 class="section-title">Collections</h1>
+
+        <div class="collection-section">
+            <div class="collection-header">
+                <h2 class="collection-title">Autumn / Winter</h2>
+                <span class="collection-year">2024</span>
+            </div>
+            <div class="collection-gallery">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
+                    class="collection-img" alt="AW24 Look 1">
+                <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="AW24 Look 2">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
+                    class="collection-img" alt="AW24 Look 3">
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--secondary-text);">
+                A tribute to the stark beauty of northern landscapes, featuring heavy wools, structural silhouettes, and
+                a monochromatic palette.
+            </p>
+        </div>
+
+        <div class="collection-section">
+            <div class="collection-header">
+                <h2 class="collection-title">Spring / Summer</h2>
+                <span class="collection-year">2024</span>
+            </div>
+            <div class="collection-gallery">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="SS24 Look 1">
+                <img src="https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="SS24 Look 2">
+                <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop%22"
+                    class="collection-img" alt="SS24 Look 1">
+                <!-- Image removed as requested -->
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--secondary-text);">
+                Fluidity and light. Exploring the interaction between fabric and movement through sheer textiles and
+                organic tones.
+            </p>
+        </div>
+
+        <div class="collection-section">
+            <div class="collection-header">
+                <h2 class="collection-title">Resort Collection</h2>
+                <span class="collection-year">2025</span>
+            </div>
+            <div class="collection-gallery">
+                <img src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Resort Look 1">
+                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Resort Look 2">
+                <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Resort Look 3">
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--secondary-text);">
+                A journey to the coast. Breezy linens, vibrant prints, and relaxed silhouettes designed for the modern
+                nomad.
+            </p>
+        </div>
+
+        <div class="collection-section">
+            <div class="collection-header">
+                <h2 class="collection-title">Signature Accessories</h2>
+                <span class="collection-year">Timeless</span>
+            </div>
+            <div class="collection-gallery">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Accessory 1" style="object-position: center;">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Accessory 2">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop"
+                    class="collection-img" alt="Accessory 3">
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--secondary-text);">
+                The finishing touches. Handcrafted leather goods and gold-plated jewelry to elevate every ensemble.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About</h4>
+                <p style="color: var(--secondary-text); font-size: 0.9rem; line-height: 1.6;">
+                    Redefining luxury through sustainable practices and avant-garde design.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 ELARA Fashion Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
