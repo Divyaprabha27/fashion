@@ -3,15 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-    // Check for saved user preference, if any, on load of the website
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        updateToggleIcon(currentTheme === 'dark');
-    } else if (prefersDarkScheme.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        updateToggleIcon(true);
-    }
+    // Force light mode on load by default (do nothing, as CSS defaults to light)
+    // Removed automatic dark mode detection to satisfy user request: "when page is refreshed i want website as light mode"
+    updateToggleIcon(false); // Ensure icon is sun/moon correct for light mode
 
     themeToggle.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
@@ -88,6 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
+        });
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close other open items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
         });
     });
 });
