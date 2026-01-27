@@ -340,7 +340,7 @@ img {
 
 /* Sections General */
 .section {
-    padding: 8rem 5%;
+    padding: 4rem 5%;
 }
 
 .alt-bg {
@@ -471,7 +471,6 @@ img {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    padding-bottom: 8rem;
 }
 
 .newsletter-form {
@@ -484,6 +483,7 @@ img {
     border: 1px solid var(--border-color);
     color: var(--text-color);
     font-family: var(--font-body);
+    padding: 1rem;
 }
 
 .newsletter-form input:focus {
@@ -711,6 +711,7 @@ footer {
     font-size: 3rem;
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
 .stat-item p {
