@@ -3,9 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-    // Force light mode on load by default (do nothing, as CSS defaults to light)
-    // Removed automatic dark mode detection to satisfy user request: "when page is refreshed i want website as light mode"
-    updateToggleIcon(false); // Ensure icon is sun/moon correct for light mode
+    // Check for saved theme preference or default to light
+    const savedTheme = sessionStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateToggleIcon(true);
+    } else {
+        updateToggleIcon(false);
+    }
 
     themeToggle.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             theme = 'dark';
         }
         document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        sessionStorage.setItem('theme', theme);
         updateToggleIcon(theme === 'dark');
     });
 
