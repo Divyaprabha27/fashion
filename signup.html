@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | ELARA</title>
+    <meta name="description" content="Create your ELARA account">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .auth-header {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .auth-logo img {
+            height: 50px;
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem 1.25rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .auth-subtitle {
+            color: var(--secondary-text);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 0.875rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(188, 147, 85, 0.1);
+        }
+
+        .btn-primary {
+            width: 50%;
+            display: block;
+            margin: 0 auto 1rem auto;
+            padding: 0.875rem;
+            color: var(--accent-color);
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .auth-title-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: 3px solid var(--primary-color);
+            font-size: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            outline: 2px solid rgba(188, 147, 85, 0.5);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+            color: var(--secondary-text);
+            font-size: 0.85rem;
+            line-height: 1;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+
+        .divider span {
+            background: var(--bg-color);
+            padding: 0.25rem 1.5rem;
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .social-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .social-btn i {
+            font-size: 1.1rem;
+        }
+
+        .terms-group {
+            margin-bottom: 1rem;
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.125rem;
+        }
+
+        .terms-checkbox label {
+            color: var(--secondary-text);
+        }
+
+        .terms-checkbox a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .terms-checkbox a:hover {
+            opacity: 0.8;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--secondary-text);
+            font-size: 0.85rem;
+        }
+
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 0.5rem;
+                justify-content: center;
+                min-height: 100vh;
+                /* Use 100vh or 100dvh if supported, fallback to min-height */
+            }
+
+            .auth-card {
+                padding: 1rem 0.75rem;
+                max-height: none;
+                /* Ensure no internal scroll constraint override */
+            }
+
+            .auth-header {
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            .auth-logo {
+                margin-bottom: 0.5rem;
+            }
+
+            .auth-logo img {
+                height: 35px;
+                margin-bottom: 0;
+            }
+
+            .auth-title {
+                font-size: 1.5rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .auth-subtitle {
+                margin-bottom: 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            .form-group {
+                margin-bottom: 0.75rem;
+            }
+
+            .form-input {
+                padding: 0.6rem 0.75rem;
+            }
+
+            .terms-group {
+                margin-bottom: 0.75rem;
+            }
+
+            .btn-primary {
+                width: 100%;
+                margin-bottom: 0.75rem;
+            }
+
+            .divider {
+                margin: 0.75rem 0;
+            }
+
+            .login-link {
+                margin-top: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container">
+        <!-- Theme Toggle -->
+        <div class="auth-header">
+            <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                <img src="assets/moon.svg" class="theme-icon" alt="Dark Mode">
+            </button>
+        </div>
+
+        <!-- Logo -->
+        <div class="auth-logo">
+            <a href="index.html" style="text-decoration: none; display: inline-block;">
+                <img src="assets/logo.svg" alt="ELARA">
+            </a>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="auth-card">
+            <h1 class="auth-title">Create Account</h1>
+            <p class="auth-subtitle">Join the ELARA community</p>
+
+            <form>
+                <div class="form-group">
+                    <input type="text" id="fullName" class="form-input" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" class="form-input" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" class="form-input" placeholder="Password" required>
+                </div>
+
+                <div class="terms-group">
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-buttons">
+                <a href="#" class="social-btn">
+                    <i class="bi bi-google"></i>
+                    Google
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="bi bi-facebook"></i>
+                    Facebook
+                </a>
+            </div>
+
+            <div class="login-link">
+                Already have an account? <a href="login.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
