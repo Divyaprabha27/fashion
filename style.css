@@ -262,6 +262,19 @@ img {
     .menu-toggle {
         display: block;
     }
+
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+}
+
+/* Utility Classes */
+.mobile-only {
+    display: none;
 }
 
 /* Hero Section */
@@ -336,6 +349,13 @@ img {
 .btn:hover {
     background: var(--text-color);
     color: var(--bg-color);
+}
+
+
+/* Navbar Button specific styles */
+.navbar .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
 }
 
 /* Sections General */
@@ -609,6 +629,12 @@ footer {
 .copyright {
     font-size: 0.8rem;
     color: var(--secondary-text);
+}
+
+/* Social Icons Hover Effect */
+/* Social Icons Hover Effect */
+.social-icons a:hover {
+    color: var(--accent-color) !important;
 }
 
 @media (max-width: 900px) {
