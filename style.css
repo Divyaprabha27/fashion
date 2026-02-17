@@ -296,6 +296,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     z-index: -1;
     opacity: 0.8;
     /* Dim slightly for text readability */
