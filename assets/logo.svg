@@ -5,10 +5,20 @@
       <stop offset="100%" style="stop-color:#8e6e3e;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Didot', 'Times New Roman', serif" font-weight="bold" font-size="36" letter-spacing="8" fill="url(#gold-gradient)">ELARA</text>
+  
+  <!-- Icon - Simple elegant diamond/shape -->
+  <g transform="translate(10, 15)">
+    <path d="M15 5 L25 15 L15 25 L5 15 Z" fill="url(#gold-gradient)" stroke="url(#gold-gradient)" stroke-width="1"/>
+    <circle cx="15" cy="15" r="3" fill="#ffffff"/>
+  </g>
+  
+  <!-- ELARA text next to icon -->
+  <text x="45" y="35" font-family="'Didot', 'Times New Roman', serif" font-weight="bold" font-size="24" letter-spacing="4" fill="url(#gold-gradient)">ELARA</text>
+  
   <style>
     @media (prefers-color-scheme: dark) {
-      text { fill: #d4af37; }
+      path, text { fill: #d4af37; }
+      path { stroke: #d4af37; }
     }
   </style>
 </svg>
